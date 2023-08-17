@@ -1,0 +1,13 @@
+[Unit]
+Description=VarioboticOS startup Service
+After=network-online.target
+
+[Service]
+Type=idle
+ExecStartPost=/bin/sleep 5
+ExecStart=/usr/bin/python3 -u exec.py
+WorkingDirectory=/home/pi/VarioboticOS
+User=pi
+
+[Install]
+WantedBy=multi-user.target
