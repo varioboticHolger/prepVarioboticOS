@@ -4,8 +4,7 @@ After=network-online.target
 
 [Service]
 Type=idle
-ExecStartPost=/bin/sleep 1
-ExecStart=/bin/bash -c 'source venv_vOS/bin/activate && python3 -u exec.py'
+ExecStart=/bin/bash -c 'sleep 10 && source venv_vOS/bin/activate && python3 -u exec.py'
 WorkingDirectory=/home/pi/VarioboticOS
 User=pi
 
